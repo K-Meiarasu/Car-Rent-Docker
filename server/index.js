@@ -43,7 +43,7 @@ connection.sync({force:true}).then((result) => {
 
 app.use(cors(
     {
-        origin: "*",
+        origin: "trustedwebsite.com",
     }
 ))
 
