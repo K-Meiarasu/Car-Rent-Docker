@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mysql = require('mysql2')
+const disapp = express()
 const app = express()
 const cors = require('cors')
 const Sequelize = require('sequelize');
@@ -9,6 +10,8 @@ const connection = new Sequelize("mydb","sgroot","4U$uY9DjE79n1rQH", {
     dialect: "mysql",
     host: "SG-mydb-5759-mysql-master.servers.mongodirector.com",
 });
+
+disapp.disable("x-powered-by")
 
 const Table = connection.define('car', {
     carId: {
