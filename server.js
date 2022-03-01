@@ -37,7 +37,7 @@ catch(e)
 
 app.use(cors(
     {
-        origin: "trustedwebsite.com",
+        origin: "*",
     }
 ))
 
