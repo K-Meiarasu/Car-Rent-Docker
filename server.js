@@ -50,7 +50,7 @@ function display(req,res)
     connection.query(sql, function (err, result) {
         if (err)
         {
-            res.json({response: "DB error"})
+            res.json({response: "Database Issue"})
         }
         else
         {
@@ -69,7 +69,7 @@ app.post('/addcar',(req,res)=>{
     connection.query(sql, function (err, result) {
         if (err)
         {
-            res.json({response: "DB error"})
+            res.json({response: "Database Issue"})
         }
         else
         {
@@ -83,7 +83,7 @@ app.post('/editcar',(req,res)=>{
     connection.query(sql, function (err, result) {
         if (err)
         {
-            res.json({response: "DB error"})
+            res.json({response: "Database Issue"})
         }
         else
         {
@@ -97,7 +97,7 @@ app.get('/deletecar',(req,res)=>{
     connection.query(sql, function (err, result) {
         if (err)
         {
-            res.json({response: "DB error"})
+            res.json({response: "Database Issue"})
         }
         else
         {
@@ -118,7 +118,7 @@ app.get('/getcar',(req,res)=>{
     connection.query(sql, function (err, result) {
         if (err)
         {
-            res.json({response: "DB error"})
+            res.json({response: "Database Issue"})
         }
         else
         {
