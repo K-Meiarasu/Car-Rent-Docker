@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mysql = require('mysql2')
+const disapp = express()
 const app = express()
 const cors = require('cors')
 const connection = mysql.createConnection({
@@ -10,6 +11,9 @@ const connection = mysql.createConnection({
     database: "",
     port: 
 })
+    
+disapp.disable("x-powered-by")
+    
 try
 {
     var sql = "SHOW TABLES LIKE 'car'";
